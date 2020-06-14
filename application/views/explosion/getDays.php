@@ -69,17 +69,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div id="container">
 	<h1>Service ticket! Home</h1>
-
+    <?php
+        print "<pre>";
+        print_r($this->data);
+        print "<pre>";
+    ?>
 	<div id="body">
             <p>Menu</p>
-            <form action="#">
+            <form action="<?php echo base_url(); ?>/explosion/getDays" method="post">
 			  <label for="fname">First Date:</label>
 			  <input type="text" id="fdate" name="fdate">
 			  <label for="fname">second Date:</label>
 			  <input type="text" id="ldate" name="ldate"><br><br>
 			  <label for="lname">Day List:</label>
 			  <input type="text" id="daylist" name="daylist"><br><br>
-			  <input type="button" value="Submit">
+			  <input type="submit" value="Submit">
 			</form>
 	</div>
 </div>
